@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "ma.moncef.petrom"
+    version   = "1.0.0">
+
+
+<preference name="phonegap-version" value="2.2.0" /> <!-- versione di phonegap usata -->
+    <preference name="orientation" value="default" /> <!-- entrambe supportate -->
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="true" /> <!-- toglie la barra in alto su iOS e Android -->
+	
+	<!-- ANDROID PREFERENCES -->
+        
+    <preference name="android-minSdkVersion" value="7" /> <!-- minimo Android 2.1 -->
+    <!-- <preference name="android-maxSdkVersion" value="17" /> massimo Android 4.2 -->
+    <preference name="android-installLocation" value="auto" />
+    
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="auto-hide-splash-screen" value="false" />
+	
+
+<name>Petrom</name>
+
+<description>
+Pétrole du maghreb.
+</description>
+
+<author href="https://example.com" email="laawad.moncef@gmail.com">
+DSI petrom
+</author>
+
+<icon src="images/icons/android/drawable-ldpi/ic_launcher.png" gap:platform="android" gap:density="ldpi" />
+<icon src="images/icons/android/drawable-mdpi/ic_launcher.png" gap:platform="android" gap:density="mdpi" />
+<icon src="images/icons/android/drawable-hdpi/ic_launcher.png" gap:platform="android" gap:density="hdpi" />
+<icon src="images/icons/android/drawable-xhdpi/ic_launcher.png" gap:platform="android" gap:density="xhdpi" />
+
+
+<gap:splash src="images/splash.png" /> <!-- default 320x480 pixels -->
+
+        
+<gap:splash src="images/splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" /> <!-- 200x320 -->
+<gap:splash src="images/splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" /> <!-- 320x480 -->
+<gap:splash src="images/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" /> <!-- 480x800 -->
+<gap:splash src="images/splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" /><!-- 720x1280 -->
+
+
+</widget>

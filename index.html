@@ -1,0 +1,1139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Petrom</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<style type="text/css">
+	/*---------------------index---------------------*/
+	#listejauge{
+		color: black;
+		font-weight: lighter;
+		font-style: normal;
+	}
+	#index_page a, #index_page_type_petrom a{
+		text-decoration: none;
+	}
+	
+	#index_page p, #index_page_type_petrom p{
+		margin:0px;
+		padding:0px;
+		font-size: 16px;
+	}
+
+
+	/*---------------------jauge---------------------*/
+ 
+	#imageJauge{
+		z-index: 1;
+		position: absolute;
+		width: 312px;
+		margin : 0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	#contenuJauge{
+		z-index: 2;
+		position: relative;
+		margin :0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	p{
+		margin :0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
+	}
+	.div-text-detail-stations{
+		color: black;
+		text-decoration:none;
+	}
+	.div-text-detail-stations a:link{
+		text-decoration:none;
+	}
+
+	.footer-mcf img{
+		height: 30px;
+	}
+
+
+
+</style>
+
+<script   src="js/baliseHeadPage.js">/*Trés importante*/</script>
+<script   src="js/Index.js"></script>
+
+<script   src="js/compte.js"></script>
+<script   src="js/fastb.js"></script>
+
+</head> 
+<body onload="initFastButtons();">
+	<span id="fastclick">
+<!--
+//---------------------------------------------------------------------------------------------------------------------
+ -->
+ <div id="index_page_type_petrom" data-role="page"  data-theme="a">
+
+	<div data-role="content"  data-inset="true" >
+		
+
+        <div  style="text-align:center;"> 
+
+        	
+
+				<div class="ui-grid-a">
+
+					<div class="ui-block-a">
+						<a href="#plan_page" rel="external" data-theme="a" data-role="button"><img id="ts1" src="images/icons/station.png">
+							<p id="titre_ts1"  class="titre_icon">Plan</p>
+						</a>
+					</div>
+
+					<div class="ui-block-b">
+						<a  href="#station_liste"  data-theme="a"  data-role="button"><img id="ts2" src="images/icons/search.png">
+							<p  id="titre_ts2" class="titre_icon">Stations</p>
+						</a>
+					</div>
+					
+				</div >
+				
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a href="#produits_page" data-theme="a"  data-role="button"><img id="ts3" src="images/icons/products.png">
+							<p  id="titre_ts3" class="titre_icon">Petrom</p>
+						</a>
+					</div>
+				</div >
+				<br><br>
+
+				
+		</div>
+		<div class="footer-mcf"  data-role="footer"  data-id="footer_mcf_index_page"  data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" class="ui-btn-active ui-state-persist"><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" ><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+		
+    </div>		
+
+</div>
+<!--
+//---------------------------------------------------------------------------------------------------------------------
+ -->
+
+
+
+<div id="index_page" data-role="page"  data-theme="a">
+
+	<div data-role="content"  data-inset="true">
+		
+
+        <div id="lebody" style="text-align:center;"> 
+        	
+			<!--
+				<div class="ui-grid-b">
+
+					<div class="ui-block-a">
+						<a href="#plan_page" rel="external" data-theme="a" ><img id="ts1" src="images/icons/station.png">
+							<p id="titre_ts1"  class="titre_icon">Plan</p>
+						</a>
+					</div>
+
+					<div class="ui-block-b">
+						<a href="#station_liste"  data-theme="a" ><img id="ts2" src="images/icons/search.png">
+							<p  id="titre_ts2" class="titre_icon">Stations</p>
+						</a>
+					</div>
+					<div class="ui-block-c">
+						<a href="#produits_page" data-theme="a" ><img id="ts3" src="images/icons/products.png">
+							<p  id="titre_ts3" class="titre_icon">Petrom</p>
+						</a>
+					</div>
+				</div >
+
+				
+				<br><br>
+			-->
+
+				<div class="ui-grid-a">
+
+				    <div class="ui-block-a">
+				    	<a id="button_index_4" href="#commande_page" data-theme="a" data-role="button" >
+				    		<img id="ts4" src="images/icons/commandes.png" >
+				    		<p  id="titre_ts4" class="titre_icon">Commande</p>
+				    	</a>
+				    </div>
+
+				<div class="ui-block-b">
+					<a id="button_index_5" href="#panne_incident_page" data-theme="a" data-role="button" >
+						<img id="ts5" src="images/icons/pannes.png" >
+						<p id="titre_ts5" class="titre_icon">Pannes</p>
+					</a>
+				</div>
+				
+				</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<a id="button_index_6" href="#jauge_page"  data-theme="a"  data-role="button">
+							<img id="ts6" src="images/icons/jauge.png" >
+							<p  id="titre_ts6" class="titre_icon">Stock</p>
+						</a>
+					</div>
+					<div class="ui-block-b">
+						<a  id="button_index_7"  href="#rapport_mobile_page" data-theme="a"  data-role="button">
+							<img id="ts8" src="images/icons/ventes.png" >
+							<p  id="titre_ts8" class="titre_icon">Rapports</p>
+						</a>
+					</div>
+				</div>
+
+
+
+
+
+			<div class="ui-grid-a">
+				<div class="ui-block-a">
+					<a id="button_index_8" rel="external" data-theme="a"  data-role="button">
+						<img id="ts7" src="images/icons/gps.png" >
+						<p id="titre_ts7"  class="titre_icon">Suivi GPS</p>
+					</a>
+				</div>
+				
+
+			<!--
+				<div class="ui-block-c">
+					<a href="#contact_page" data-theme="a" >
+						<img id="ts9" src="images/icons/contact.png">
+						<p  id="titre_ts9" class="titre_icon">Contact</p>
+					</a>
+				</div>
+			-->
+			</div>
+		</div>
+		<div class="footer-mcf" data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+		
+    </div>		
+
+</div>
+
+
+
+<div id="connexion_page" data-role="page" data-theme="a" >   
+       
+	<div data-role="content" >  	
+       
+                <div id="connecte">
+                             	<form id="form_connexion">
+                                
+	                                <fieldset data-role="fieldcontain">
+	                                        <label for="username_connexion">Identifiant :</label>
+	                                        <input type="text" name="username_connexion" id="username_connexion" value="" />
+	                                  </fieldset>
+
+	                                  <fieldset data-role="fieldcontain">
+	                                        <label for="password_connexion">Mot de passe :</label>
+	                                        <input type="password" name="password_connexion" id="password_connexion" value=""/>
+	                                 </fieldset>
+
+	                                 <fieldset data-role="fieldcontain">  
+	                                        <input type="button" id="valider_connexion" value="Se connecter" data-theme="a" />
+	                                </fieldset>             
+
+                                </form>           
+                </div>
+                <fieldset data-role="fieldcontain">
+                 	
+                 	<div data-role="popup" id="myPopupDiv_connexion_err" data-theme="e">
+					<p>
+						<div id="error_connexion">
+
+                		</div>
+                	</p>
+</div>
+
+            	</fieldset>
+
+            	<div class="footer-mcf" data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+					<div data-role="navbar">
+						<ul>
+							<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+							<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+							<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+						</ul>
+					</div><!-- /navbar -->
+				</div><!-- /footer -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="rapport_mobile_page" data-role="page"  data-theme="a" >		
+
+		<div data-role="content">
+				
+                <form id="form1_rapport" name="form1_rapport">
+                   
+	                    <fieldset data-role="fieldcontain">
+		                    <label for="date_rapport">Date</label>
+							<input required data-mini="false" name="date" id="date_rapport" type="date" data-role="datebox" data-options='{"mode":"flipbox" , "beforeToday":true,"useFocus": true }' centerHoriz="true" data-mini="false">
+						</fieldset>
+
+
+						<!-- heure debut-->
+						 <fieldset data-role="fieldcontain">
+		                   <label for="heure_rapport">Heure</label>
+						   <input type="range" name="heure" id="heure_rapport" value="7" min="0" max="23" data-highlight="true" readonly data-theme="d" />
+						</fieldset>	
+						
+
+						<fieldset data-role="fieldcontain">
+		                   <label for="minute_rapport">Minute</label>
+						   <input type="range" name="minute" id="minute_rapport" value="0" min="0" max="59" data-highlight="true" readonly data-theme="d" />
+						</fieldset>		
+
+                        
+                       <!-- ID distributeur -->
+                        <fieldset data-role="fieldcontain">
+							<label for="id_distributeur">Pistolet</label>
+							<select name="id_distributeur" id="id_distributeur" data-mini="false">
+								
+								<option id="optionDistributeur"  value="0" selected="">--choisissez--</option>
+								
+							</select>
+						</fieldset>
+						<!--Fin id distributeur-->
+
+						<!-- ID carburant -->
+                        <fieldset data-role="fieldcontain">
+							<label for="id_carburant">Carburant</label>
+							<select name="id_carburant" id="id_carburant" data-mini="false">
+								
+								<option  value="0" selected="">--choisissez--</option>
+								<option  value="1" >SSP</option>
+								<option  value="2" >GASOIL50</option>
+								<option  value="3" >Mélange</option>
+								
+							</select>
+						</fieldset>
+						<!--Fin id carburant-->               
+                       
+                        <button id="submit_rapport" type="submit" data-theme="d">valider</button>
+                            
+                </form>
+			<!--//content-->
+		</div>
+		<div class="footer-mcf"  data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	
+</div>
+
+
+
+
+
+
+<div id="resultat_rapport_page" data-role="page"  data-theme="a">
+		<div data-role="content">
+
+						
+						<div id="collapsible_resultat_r_recap" data-theme="e"  data-mini="false" data-inset="false" data-role="collapsible-set" data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" class="ui-collapsible-set">
+							<div data-role="collapsible" data-collapsed="false">
+								<h5>Recap du Rapport</h5>
+								
+								<div id="recapitulative" >
+									<ul id="rec_listview" data-role="listview"  data-theme="c" data-inset="true">
+																				
+									</ul>
+								</div>
+							</div>							
+						
+							<div data-role="collapsible" >
+								<h5>Detail du Rapport</h5>							
+								<ul id="listview1" data-role="listview" data-inset="true" data-theme="b" data-dividertheme="d">
+											
+								</ul>
+								<div id="divviewmore">
+									<button id='viewmore' data-theme="a">voir plus</button>
+								</div>
+							</div>							
+						</div>
+						
+					 
+		</div>
+		<div class="footer-mcf"  data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+
+
+
+
+
+
+	<div id="panne_incident_page" data-role="page"  data-theme="a" >	
+
+		<div align="" data-role="content">		
+			
+               	<br/>
+               	<br/>
+               	<br/>
+               	<div class="ui-grid-a">
+
+					<div class="ui-block-a">
+						<a href="#suiviPannes_page" data-ajax="false" data-role="button" data-icon="" data-theme="e" >
+							<img src="images/icons/suivi_panne.png">
+							<p class="titre_icon">Suivi</p>
+						</a>
+					</div>
+
+					<div class="ui-block-b">
+						<a href="#declarer_panne_page" data-role="button" data-icon="" data-theme="a" >
+							<img src="images/icons/declarer_panne.png">
+							<p class="titre_icon">Déclaration</p></a>   
+					</div>
+              	
+				</div>
+	
+		</div>
+		<div class="footer-mcf"  data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="suiviPannes_page" data-role="page"  data-theme="a">
+		<div data-role="content">
+							
+						<fieldset data-role="fieldcontain">
+							
+		                    <form id="form1_suivi_panne" name="form1_suivi_panne">
+		                  
+							<label for="date">Date de déclaration:</label>
+							<input name="date" type="date" data-role="datebox" id="date" data-options='{"mode":"flipbox" , "beforeToday":true,"useFocus": true }' centerHoriz="true" data-mini="true"/>
+							    
+							<div id="masquer">
+								<label for="date1">End Date:</label>
+								<input id="date1" type="text" readonly />
+							</div>
+
+							<a id="rechercher" href="" data-role="button" data-theme="a" data-inline="false">Rechercher</a>
+							
+							</form>
+
+						</fieldset>
+
+							<ul id="listview1_suivi_panne" data-role="listview" data-inset="true" data-theme="c" data-dividertheme="e">
+
+							</ul>
+							
+							<div id="divviewmore_suivi">
+								<button id='viewmore_suivi' data-theme="e">voir plus</button>
+							</div>
+						
+		</div>
+		<div class="footer-mcf"  data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+
+
+
+
+
+
+
+
+
+
+<div id="declarer_panne_page" data-role="page"  data-theme="a">
+
+		<div align="" data-role="content">
+		<!--content-->			
+                <form id="form1" name="form1">
+
+                   <fieldset data-role="fieldcontain">
+                   	<label for="categorie">Catégorie :</label>
+                   	<select name="categorie" id="categorie" data-mini="false">
+						<option value="Panne" selected>Panne</option>
+						<option value="Incident">Incident</option>
+					</select>
+                   </fieldset >
+
+                   <fieldset data-role="fieldcontain">
+                   	<label for="type">Type :</label>
+                  	<select name="type" id="type" data-mini="false">
+						<option value="0" selected="">--Types des pannes--</option>
+					</select>					
+                   </fieldset >
+
+                   
+	                <fieldset data-role="fieldcontain">
+		                <label for="date_apparition">Date d'apparition :</label>
+						<input required data-mini="false" name="date_apparition" id="date_apparition" type="date" data-role="datebox" data-options='{"mode":"flipbox",  "beforeToday":true,"useFocus": true }' centerHoriz="true" data-mini="false">
+					</fieldset >
+
+					<fieldset data-role="fieldcontain">
+	                   	<label for="equipement">Equipements :</label>
+	                  	<select name="equipement" id="equipement" data-mini="false">
+							<option id="option_equipement"  value="0" selected="">--Choisissez--</option>
+						</select>
+                   </fieldset >
+               
+					
+					<fieldset data-role="fieldcontain">
+	                   	<label for="assigner">Assigner à :</label>
+	                  	<select name="assigner" id="assigner" data-mini="false">									
+							<option id="option_assigner"  value="0" selected="">non assigné</option>
+						</select>
+                   </fieldset >
+
+
+					
+
+					<fieldset data-role="fieldcontain">
+	                   	<label for="priorite">Priorité :</label>
+	                   	<select name="priorite" id="priorite" data-mini="false">
+							<option value="Basse" selected >Basse</option>
+							<option value="Moyenne" >Moyenne</option>
+							<option value="Haute" >Haute</option>
+									
+						</select>
+	                 </fieldset >
+                        
+
+                      <fieldset data-role="fieldcontain">
+	                   	<label for="etat">Etat :</label>
+	                   	<select name="etat" id="etat" data-mini="false">
+									
+							<option  value="Ouvert" selected >Ouvert</option>
+							<option  value="En attente" >En attente</option>
+							<option  value="Ferme" >Fermé</option>
+							<option  value="Supprime" >Supprimé</option>
+									
+						</select>
+	                 </fieldset >
+
+
+	                 <fieldset data-role="fieldcontain">
+	                   	<label for="resolution">Résolution :</label>
+	                   	<select name="resolution" id="resolution" data-mini="false">		
+							<option value="0" selected>0 %</option>
+							<option value="10" >10 %</option>
+							<option value="20">20 %</option>
+							<option value="30">30 %</option>
+							<option value="40">40 %</option>							
+							<option value="50">50 %</option>							
+							<option value="60">60 %</option>
+							<option value="70">70 %</option>
+							<option value="80">80 %</option>
+							<option value="90">90 %</option>
+							<option value="100">100 %</option>
+						</select>
+	                 </fieldset >
+
+	                 <fieldset data-role="fieldcontain">
+	                   	<label for="description">Description :</label>
+	                    <textarea rows="5" cols="70" id="description" name="description"></textarea>
+	                 </fieldset >
+
+						<!--Fin id carburant-->
+					<button id="submit" type="submit" data-theme="c">valider</button>
+					<h4 id="text"></h4>
+                           
+                </form>
+		</div>
+		<div class="footer-mcf"  data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	
+</div>
+
+
+
+
+
+
+
+<div id="contact_page" data-role="page"  data-theme="a">
+	<div data-role="content">
+
+		<form name="form_contact" id='form_contact' >
+			<fieldset data-role="fieldcontain">
+			    <label for="nom">Nom:</label>
+			    <input type="text" name="nom" id="nom" value=""  />
+			</fieldset>
+			<fieldset data-role="fieldcontain">
+			    <label for="prenom">Prénom:</label>
+			    <input type="text" name="prenom" id="prenom" value=""  />
+			</fieldset>
+			<fieldset data-role="fieldcontain">
+			    <label for="email">Email:</label>
+			    <input type="text" name="email" id="email" value=""  />
+			</fieldset>
+			<fieldset data-role="fieldcontain">
+			    <label for="entreprise">Entreprise:</label>
+			    <input type="text" name="entreprise" id="entreprise" value=""  />
+			</fieldset>
+			<fieldset data-role="fieldcontain">
+				<label for="msg">Message:</label>
+				<textarea cols="40" rows="8" name="msg" id="msg"></textarea>
+			</fieldset>
+		
+			<fieldset data-role="fieldcontain">   
+			    <button id="envoyer" data-theme="a" >Envoyer</button>
+			</fieldset>
+		</form>
+		
+
+		<div data-role="popup" id="myPopupDiv_contact" data-theme="a" class="ui-content" >
+			<center><img src="images/tick.png" ></center>
+			<p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				Envoyé
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><p>
+		</div>
+
+		<div  class="footer-mcf" data-role="footer"  data-id="footer_mcf_index_page"  data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" ><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" class="ui-btn-active ui-state-persist">
+						<p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+	</div>
+
+</div>
+
+
+
+
+<div id="produits_page" data-role="page"  data-theme="a" >
+
+	<div data-role="content" data-inset="true" id="contenu_produits"> 
+
+  	 <br/>
+	<div data-role="collapsible" data-collapsed="false" data-theme="c" data-content-theme="d">
+
+		   <h3 style="color:red;">Histoire de PETROM</h3>
+		   
+		   <ul id="List" data-role="listview" data-filter="false" data-theme="d">
+		   
+		   <li>1945: Apr&egrave;s la deuxi&egrave;me guerre mondiale, la soci&eacute;t&eacute; am&eacute;ricaine ESSO s'est install&eacute;e au Maroc &agrave; travers sa filiale Esso Maroc.
+		   Celle-ci op&eacute;rait dans la distribution des produits p&eacute;troliers au m&ecirc;me titre que Shell, Agip, Total et d'autres.
+		 </li>
+		 <li>1975: la nouvelle loi de marocanisation a oblig&eacute; les soci&eacute;t&eacute;s multinationales &agrave; c&eacute;der 51% de leur capital au gouvernement.
+		Esso d&eacute;cida de se retirer et a vendu ses parts &agrave; la Soci&eacute;t&eacute; Nationale des Produits P&eacute;troliers SNPP, soci&eacute;t&eacute; &eacute;tatique ayant en charge la gestion du secteur p&eacute;trolier. Esso a &eacute;t&eacute; depuis renomm&eacute;e Petrom (Petrole du Maghreb).
+		</li>
+		 <li>1993:  le gouvernement marocain d&eacute;cida de privatiser ce secteur. Mobil, Shell et Total ont repris le contr&ocirc;le de leurs filiales, et Petrom f&ucirc;t acquis par le Groupe Holsatek.
+		</li>
+		 
+		   </ul>
+		   </br>
+		<center>
+
+		<img src="images/apr.jpg" border="0" width="90%" />
+
+		</center>
+	</div>
+	<br/>
+
+	<div data-role="collapsible" data-collapsed= "false" data-theme="c" data-content-theme="d">
+		   <h3 style="color:red;">Activit&eacute;s de PETROM</h3>
+		  <p>&nbsp;&nbsp;&nbsp;Son <b>engagement</b>, son <b>positionnement</b>, ainsi que son <b>histoire</b>, font de PETROM un op&eacute;rateur incontournable sur le march&eacute; p&eacute;trolier marocain, o&ugrave; il jouit de la notori&eacute;t&eacute; aupr&egrave;s de ses clients, et de la confiance de ses partenaires.</br>
+		&nbsp;&nbsp;&nbsp;PETROM conjugue ses moyens financiers, humains, techniques et informationnels autour  de  5 grandes cat&eacute;gories de produits <b>-carburant, produits noirs, le gaz, produits chimiques, produits lubrifiants-</b> dans lesquelles il dispose de l'expertise et du savoir-faire.
+
+		   </p>
+		<b><u><font color="BROWN">Carburants:</font></u></b>
+		<p>
+		PETROM d&eacute;tient <b>11%</b> de part de march&eacute; et garantie la distribution de carburant sur l'ensemble du royaume &agrave; travers plus de <b>220</b> stations de services.
+		</p>
+		<br/>
+
+		<b><u><font color="BROWN">Espace Shop et Restaurant</font></u></b>        
+
+			<br/>
+
+			<img src="images/apr1.jpg" border="0" width="90%" />     
+
+			<br/>
+
+		<b><u><font color="BROWN">Concept Lavage El&eacute;phant Bleu</font></u></b>        
+
+			<br/>
+
+			<img src="images/apr2.jpg" border="0"  width="90%" />    
+
+		<br/>
+		<b><u><font color="BROWN">Carte privative ATTARIK</font></u></b>        
+
+			<br/>
+
+			<img src="images/apr3.jpg" border="0"  width="90%"  />     
+
+		</br>
+		<b><u><font color="BROWN">GAZ</font></u></b>        
+
+			<br/>
+
+			<img src="images/pr_2.jpg" border="0"  width="90%" />     
+
+
+			<p align="left">
+
+			PETROM, distributeur de gaz butane et propane &agrave; usage domestique  et professionnel.
+
+			</p>
+		</br>
+		<b><u><font color="BROWN">Produits noirs</font></u></b>        
+
+			<br/>
+
+			<img src="images/pr_1.jpg" border="0"  width="90%"  />    
+
+
+			<p align="left">
+
+			Leader sur le march&eacute; des produits  noirs avec<b> 50 %</b> du part de march&eacute;, PETROM renforce sa pr&eacute;sence dans le secteur industriel avec un portefeuille de 100 clients.
+
+
+			</p>
+		<br/>
+		<b><u><font color="BROWN">Produits chimiques</font></u></b>        
+
+			<br/>
+
+			<img src="images/pr_3.jpg" border="0" width="90%"  />    
+
+
+			<p align="left">
+
+			Avec <b>55%</b> de part de march&eacute; des produits
+
+		chimiques, PETROM importe et distribue                   
+
+		deux larges gammes de produits chimiques :<br/>             
+
+		-Gamme de produits chimiques industriels, <br/>             
+
+		-Gamme de produits de solvants: <br/>                     
+
+		 Solvesso, Hexane, Toluene, Withe spirite...
+
+
+
+			</p>
+
+		<br/>
+		<b><u><font color="BROWN">Produits lubrifiants</font></u></b>        
+
+			<br/>
+
+			<img src="images/pr_4.jpg" border="0"  width="90%" 	/>  
+			
+
+			<p align="left">
+
+			Depuis 2009, PETROM commercialise 
+
+		sa propre marque de lubrifiants, pour 
+
+		les lubrifiants synth&eacute;tiques et semi
+
+		synth&eacute;tiques :
+
+		Huiles automobiles, huiles industriels 
+
+		et graisse.
+			</p>
+		</div>
+
+	<br/>
+	<div data-collapsed= "false" data-role="collapsible" data-theme="c" data-content-theme="c">
+		   <h3 style="color:red;">PETROM en chiffres</h3>
+		   <ul id="List" data-role="listview" data-filter="false" data-theme="d">
+		   
+			 <li>4 Milliards de dirhams de chiffre d'affaires.</li>
+			 <li>300 collaborateurs.</li>
+			 <li>Un portefeuille de 100 clients industriels.</li>
+			 <li>Plus de 220 stations de service.</li>
+			 <li>6 d&eacute;p&ocirc;ts &eacute;tendus sur tout le Royaume (Mohammedia Oued El Maleh - Mohammedia Port - Agadir - Nador - Sidi Kacem - Laâyoune).</li>
+			 <li>60.000m3 de capacit&eacute; de stockage en produits blancs.</li>
+			 <li>5.000m3 de capacit&eacute; de stockage en produits chimiques.</li>
+			 <li>55% de part de march&eacute; des produits chimiques (Solvants).</li>
+			 <li>50% de part de march&eacute; des produits noirs (Fuel). </li>
+			 <li>11% de part de march&eacute; des carburants.</li>
+		   
+		   </ul>
+		 
+
+
+		</div>
+</div>
+<div class="footer-mcf"  data-role="footer"  data-id="footer_mcf_index_page"  data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" class="ui-btn-active ui-state-persist"><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" ><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+
+
+
+<div id="jauge_page" data-role="page"  data-theme="a" style="background:#FFFFFF;">
+		<div  data-role="content">
+			<div data-theme="b" id="listejauge" data-mini="false" data-inset="false" data-role="collapsible-set" data-collapsed-icon="arrow-r" data-exepanded-icon="arrow-d" class="ui-collapsible-set">
+			
+			</div>	
+		</div><!--Fin Div COntent-->
+
+		<div class="footer-mcf"  data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+
+
+
+
+
+
+
+
+<div id="plan_page" data-role="page"  data-theme="a">
+	<div data-role="content"  style="padding:0;"> 
+			
+		   <div id="map_canvas" style="width:100%; height:250px;">
+
+		   </div>		   
+
+	</div>
+</div>
+
+
+
+
+
+<div id="station_detail_page" data-role="page"  data-theme="a" >
+	<div data-role="content">		
+  	 <ul id="stationsList" data-role="listview" data-filter="false">
+	<li>
+		<img src="images/GasStation-icon.png"/>
+					 <h4 id="fullName"></h4> 
+					 <p id="employeeTitle" ></p>
+					 <p id="city" ></p>
+	</li>
+	
+	<li>
+					 <br/>
+					 <p id="prix_ssp" ></p>
+					 <p id="prix_ga" ></p>
+
+					 <div id="info_dis_dur" ><p class="ui-li-aside"  >
+					  	<div class="ui-li-count">
+
+					  		<strong id="distance" >
+					  			Distance: <span id="dis"></span>
+					  		</strong>
+
+					  		<br/>
+					  		<strong id="duration" >
+					  			Duraction: <span id="dur"></span>
+					  		</strong> 
+					  	</div>
+					 </p> 
+					 </div>
+					 
+	</li>
+	
+	
+	<li>
+	  <br/>
+					
+					<table>
+					 <tr>
+						<td><img id="e_lavage"/> Lavage</td>
+						<td><img id="e_entretien"/> <b>Entretien</b></td>
+					 </tr>
+					<tr>
+						<td><img id="e_boutique"/> <b>Boutique</b></td>
+						<td><img id="e_gaz"/> <b>Gaz</b></td>
+					 </tr>
+					 <tr>
+						<td><img id="e_restauration"/> <b>Restauration</b></td>
+						<td> </td>
+					 </tr>
+					 
+					  </table>
+					 
+	</li>
+	
+	
+	 
+	</ul>
+	       <a  id="plan" data-role="button" data-transition="slideup">Plan</a>
+</div>
+<div  class="footer-mcf"  data-role="footer"  data-id="footer_mcf_index_page"  data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" class="ui-btn-active ui-state-persist"><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" ><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+</div>
+
+<div id="station_liste" data-role="page"  data-theme="a" >
+
+
+	<div data-role="content">
+		<h2 id="titre_mcf"></h2>
+		<fieldset data-role="fieldcontain">
+			
+			<select name="select-choice" id="select-choice" >
+			</select>			
+		</fieldset >	
+
+		<fieldset data-role="fieldcontain">
+		    <ul id="stationsList_recherche" data-role="listview" >
+		    </ul>
+		</fieldset>
+
+	</div>
+	<div  class="footer-mcf"  data-role="footer"  data-id="footer_mcf_index_page"  data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" class="ui-btn-active ui-state-persist"><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" ><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+
+
+</div>
+
+
+
+<div id="station_plan_page" data-role="page"  data-theme="a" >
+
+	<div data-role="content"  style="padding:0;"> 
+  	 
+	<div id="map_canvas_itiniraire" style="width:100%; height:250px;">
+	</div>
+
+	</div>
+
+</div>
+
+<div id="commande_page" data-role="page"  data-theme="a">
+	
+			<fieldset data-role="fieldcontain">
+				<label for="date_livraison">Date de livraison</label>
+				<input required="required" data-mini="false" name="date_livraison" id="date_livraison" type="date" data-role="datebox" data-options='{"mode":"flipbox",  "useFocus": true }' centerHoriz="true" data-mini="false">		
+			</fieldset >
+
+		<!--
+			<fieldset data-role="fieldcontain">
+				<label for="nbr_prod">Nombre de produits</label>
+				<input data-mini="true" name="nbr_prod" id="nbr_prod" type="text" >
+			</fieldset >
+		-->
+			
+			<fieldset data-role="fieldcontain">				
+				<button id="ajouter" data-theme="a" data-icon="plus">Ajouter Produit</button>
+				<button id="enregistrer" data-theme="a" data-icon="check">Enregistrer Commande</button>
+			</fieldset >
+			
+
+			<div data-role="popup" id="popupBasic" data-theme="a">
+				<div style=" padding:10px 20px;">
+					<center><h2>&nbsp; Ajouter Produit &nbsp;</h2></center>
+									<p id="xxxd"></p>		
+									<fieldset data-role="fieldcontain">
+										<label for="type_produit">Type des Produits</label>
+										<select data-	="false" name="type_produit" id="type_produit">
+											<option  value="" selected="">--Choisissez--</option>				
+										</select>
+									</fieldset >	
+
+									<fieldset data-role="fieldcontain" id="product">
+										<label for="produit">Produits</label>
+										<select data-mini="false" name="produit" id="produit">
+											<option  value="" selected="">--Choisissez--</option>				
+										</select>
+
+
+										<label for="quantite">Quantit&eacute </label>
+										<input type="text" name="quantite" id="quantite" value="1" data-theme="d" 	/>
+
+
+										<label for="unite">Unit&eacute </label>
+										<input readonly data-mini="true" type="text" name="unite" id="unite" value="" />
+									</fieldset >
+																		
+
+									<fieldset data-role="fieldcontain">
+									<fieldset data-role="controlgroup"  data-type="horizontal" data-role="fieldcontain">
+										<legend>Prise au depot</legend>
+										<input type="radio" name="radio-choice-a1" id="radio-choice-a1" value="on" checked class="radio_prise_au_depot"/>
+										<label for="radio-choice-a1">Oui</label>
+										<input type="radio" name="radio-choice-a1" id="radio-choice-b1" value="off"  class="radio_prise_au_depot" />
+										<label for="radio-choice-b1">Non</label>
+									</fieldset>
+									<fieldset >
+
+									<fieldset data-role="fieldcontain" id="livraison_div">
+										<label  for="site_livraison">site de livraison</label>
+										<input data-mini="false"  type="text" name="site_livraison" id="site_livraison"  />
+									</fieldset >
+									
+									<fieldset data-role="fieldcontain">		
+										<input id="b_ajouter_commande" type="submit" value="ajouter" /> 
+									</fieldset>
+									<button id="okokok">afficher</button>
+									<button id="nonono">vider tableau</button>
+					
+				</div>
+			</div>
+
+			<div class="footer-mcf"  data-role="footer" data-id="footer_mcf_index_page" data-position="fixed">		
+			<div data-role="navbar">
+				<ul>
+					<li><a  href="#index_page_type_petrom" ><p><img src="css/images/111-user.png"  height="45px" ></p>Public</a></li>
+					<li><a  href="#index_page" class="ui-btn-active ui-state-persist"><p><img src="css/images/112-group.png"  height="45px" ></p>Partenaires</a></li>
+					<li><a  href="#contact_page" ><p><img src="css/images/18-envelope.png"  height="45px" ></p>Contact</a></li>
+
+				</ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer -->
+
+</div>
+
+</span> <!-- end fastclick -->
+
+
+
+<script  src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyDTNtct8ybaiOiXEqDxnNb8scBRXpg7c3U"></script>
+<script  src="js/jquery.ui.map.js"></script>
+<script  src="js/jquery.ui.map.extensions.js"></script>
+
+<script  src="js/contenuJauge.js"></script>
+<script  src="js/contact.js"></script>
+
+<script  src="js/datePickerMobile.js"></script>
+ 
+<script  src="js/plan.js"></script>
+
+<script src="js/stationsdetails.js"></script> 
+<script src="js/functionRapportMobile.js"></script>
+
+<script src="js/liststations.js"></script>
+
+<script src="js/stationPlan.js"></script>
+
+
+
+
+<script  src="js/declarerPanne.js"></script>
+
+<script  src="js/rapportMobileDistributeur.js"></script>
+<script  src="js/rapportMobile.js"></script>
+
+<script  src="js/resultatRapport.js">//contenu</script>
+
+<script src="js/cryptMD5.js"></script>
+<script src="js/connex.js"></script>
+<script  src="js/logout.js"></script>
+<script  src="js/suiviPannes.js">//contenu</script>
+
+<script  src="js/commande.js">//contenu</script>
+
+</body>
+
+
+
+
+</html>
